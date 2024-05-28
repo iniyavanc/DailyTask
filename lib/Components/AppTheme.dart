@@ -4,6 +4,10 @@ class AppTheme {
   static const Color primaryColor = Color(0xfff7faff);
   static const Color white = Color(0xffffffff);
   static const Color secondaryColor = Color(0xff14408b);
+  static const Color darkBlack = Color(0xFF212121);
+  static const Color liteBlack = Color(0xFF3A3A3A);
+  static const Color liteGreen = Color(0xFF29B48B);
+
   static const Color bottomTabsLabelInActiveColor = Color(0xff808895);
   static const Color textColor = Color(0xFF49586d);
   static const Color grey = Color(0xff9E9E9E);
@@ -11,6 +15,7 @@ class AppTheme {
   static const Color appBlueColor = Color(0xFF002551);
   static const Color blueColor = Color(0xFFF68326);
   static const Color border = Color(0xFF887E7E);
+
   // static const Color textColor = Color(0xcc252525);
   static const Color labelColor = Color(0x4D252525);
   static const Color labelColor90 = Color(0xE6252525);
@@ -49,7 +54,7 @@ class AppTheme {
   static const Color borderLightGrey = Color(0xffF5F5F5);
   static const Color borderLineLightGrey = Color(0xffD3D3D3);
   static const Color dividerColor = Color(0x1A000000);
-  static const Color liteGreen = Color(0xff1ecd86);
+  // static const Color liteGreen = Color(0xff1ecd86);
   static const Color redShade = Color(0xFFB47275);
   static const Color corrosion = Color(0xFF4E567E);
   static const Color successShade4 = Color(0xFF98CCD0);

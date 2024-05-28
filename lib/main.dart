@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:provider/provider.dart';
 import 'Components/AppTheme.dart';
-import 'UI/HeadlinesScreen.dart';
-import 'UI/MainScreen.dart';
+import 'Provider/MenuDataProvider.dart';
+import 'Routes/AppPages.dart';
+import 'Routes/AppRoutes.dart';
+import 'UI/ShoppingAppUI/ProductScreen.dart';
+import 'UI/name.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider<MenuDataProvider>(
+      create: (_) => MenuDataProvider(),
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,22 +24,22 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: AppTheme.appColor,
+      statusBarColor: AppTheme.darkBlack,
       statusBarIconBrightness: Brightness.light,
     ));
     final ThemeData appTheme = ThemeData(
       appBarTheme: AppBarTheme(
         elevation: 0,
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        backgroundColor: AppTheme.appColor,
+        backgroundColor: AppTheme.darkBlack,
       ),
     );
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: appTheme,
-      home: HeadlinesScreen(),
-      // initialRoute: AppRoutes.root.toName,
-      // getPages: AppPages.list,
+      home: ProductScreen(),
+      initialRoute: AppRoutes.root.toName,
+      getPages: AppPages.list,
     );
   }
 }
